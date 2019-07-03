@@ -12,7 +12,7 @@ script:
   - "docker run --rm -v `pwd`:/workspace -w /workspace lsstsqre/lsst-texmf:latest sh -c 'make'"
 after_success:
   # Deploy website. See https://github.com/lsst-sqre/lander for CLI options
-  - 'lander --upload --ltd-product dmtr-141 --pdf DMTR-141.pdf --env travis --lsstdoc DMTR-141.tex'
+  - 'lander --upload --ltd-product dmtr-141 --pdf DMTR-141.pdf --env travis --lsstdoc DMTR-141.tex --abstract "This brief report describes measurements of interest that were carried out for release v18.0.0 of the Science Pipeline."'
 env:
   global:
     - secure: "Og4/0mdBs6xhpoV1LcaOAe2MnzzVLj4wmbbRkqOI7cODEoyyRe4YMEpl7sk3qO/ojDGRmhhtVqf9b0j67kRwCqvwqX0UmgPc87MNi4Ma7WBHv7xWfpLotR/ePH1EjnCFF7NbY0hgRfNFRdAEY+gfkJlbUb7IpoxeZF27/k9LX7vTcGFobV795KNrxxBLoGSfO6Z+4W25S431gtE46dxsZCDp0/D7F+/KSg1LdY3gv9VoPD67dxxOUFeBG9zyYPRzA15GxxIfvUvoGZSEt03o/p4DVDkPRseyASkyu+ybtSzh7GiwPj19n/6JwRnTWZTsYP8qRmCloo2X9FE/QkXIG5m+p2+oL8pCUCsvLTUMDwDPXrIYRM3kra2mzQGJg5pMj9k9qu0MCbqMwM+w82ljAbxa7eugWkXLUeYnLuHWiBYGNZfUAN9IOwn2aREAgB9lwvb4Uu2VS3C0G4xW6jwtlHvNfleQ84DDPz7Uq242xPDgApHQwQytI0qj0nRpwPA380jFyEd36vBawW6KR+mYjYJMbrKs5xR3+FhHiLqsFw+dr5/tietw/wlRq9MVEerA01m+rpl54nE6PLHABc5C8ESCsNsNFoqQVeZez1dtindP9D+5xRX6zRWKjmuQHGQ2VzGiE6xAjDFdU1BF9VhNNU+6IBXeTZ1LrOBwS5MzVxA="
