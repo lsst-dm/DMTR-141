@@ -25,7 +25,7 @@ $(OBJ): $(tex) meta.tex acronyms.tex
 .FORCE:
 
 #The generateAcronyms.py  script is in lsst-texmf/bin - put that in the path
-acronyms.tex :$(tex) myacronyms.txt
+acronyms.tex :$(tex) myacronyms.txt skipacronyms.txt
 	${TEXMFHOME}/../bin/generateAcronyms.py -t $(tex)
 
 clean :
