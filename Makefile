@@ -19,7 +19,7 @@ OBJ=$(SRC:.tex=.pdf)
 #Default when you type make
 all: $(OBJ)
 
-$(OBJ): $(tex) meta.tex acronyms.tex
+$(OBJ): $(tex) meta.tex
 	latexmk -bibtex -xelatex -f $(SRC)
 
 .FORCE:
